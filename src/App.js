@@ -65,9 +65,7 @@ function App() {
   };
   return (
     <Home onClick={handler}>
-      <Flappybird>Flappy Bird</Flappybird>
-      <div className="main">
-      <Score>Score: {score}</Score>
+      <span>Score: {score}</span>
       <Background height={WALL_HEIGHT} width={WALL_WIDTH}>
         {!isStart ? <Startboard>Click To Start</Startboard> : null}
         <Obj
@@ -91,8 +89,6 @@ function App() {
           deg={0}
         />
       </Background>
-      </div>
-      <Flappybird>Flappy Bird</Flappybird>
     </Home>
   );
 }
@@ -104,20 +100,6 @@ const Home = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-const Flappybird = styled.div`
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  padding-left: 170px;
-  font-size: 50px;
-`;
-const Score = styled.div`
-  font-size: 50px;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  margin-left: 115px;
 `;
 const Background = styled.div`
   background-image: url("./images/background-day.png");
